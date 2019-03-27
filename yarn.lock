@@ -945,6 +945,21 @@
     hash-sum "^1.0.2"
     upath "^1.1.0"
 
+"@vuepress/shared-utils@^1.0.0-alpha.44":
+  version "1.0.0-alpha.44"
+  resolved "https://registry.yarnpkg.com/@vuepress/shared-utils/-/shared-utils-1.0.0-alpha.44.tgz#916f2c3c7f121d490936464997d7e31200e558b8"
+  integrity sha512-2dQWfvoJr9JskbHxsvR7WIFi5bqjbl5Uhlo5z1sw2nG7DsVwVTGvavfelijU6oJtAWzmKXaolpMfivHPgzIjWQ==
+  dependencies:
+    chalk "^2.3.2"
+    diacritics "^1.3.0"
+    escape-html "^1.0.3"
+    fs-extra "^5.0.0"
+    globby "^8.0.1"
+    gray-matter "^4.0.1"
+    hash-sum "^1.0.2"
+    semver "^5.5.0"
+    upath "^1.1.0"
+
 "@vuepress/theme-default@^1.0.0-alpha.18":
   version "1.0.0-alpha.18"
   resolved "https://registry.yarnpkg.com/@vuepress/theme-default/-/theme-default-1.0.0-alpha.18.tgz#e14f89985b33b803487429c5403664c92384a308"
@@ -6956,6 +6971,18 @@ vuepress-html-webpack-plugin@^3.2.0:
     tapable "^1.0.0"
     toposort "^1.0.0"
     util.promisify "1.0.0"
+
+vuepress-plugin-clean-urls@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-clean-urls/-/vuepress-plugin-clean-urls-1.0.3.tgz#87ef2349d6d1f835dc2519abeb0cb99ccf1698a5"
+  integrity sha512-fdsK2e+cTm8mVRm2S8TcnlijPZTX31v61sqUx+4Xiq+KqB05UQlpKI1lz1gte59L8VeDoOE0JjoGXpDFTFlqcQ==
+
+vuepress-plugin-dehydrate@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-dehydrate/-/vuepress-plugin-dehydrate-1.0.2.tgz#52ee904169fbb60542222e3cbc176e8464b5aa07"
+  integrity sha512-T04skAajarLfSAbvhyawQe8eDTrVVEHvBBDghBb3LZp8GRBKJZkbygM0GPVPM8QItJGnVKSNnCqwCkPZhdl/TQ==
+  dependencies:
+    "@vuepress/shared-utils" "^1.0.0-alpha.44"
 
 vuepress@^1.0.0-alpha.18:
   version "1.0.0-alpha.18"

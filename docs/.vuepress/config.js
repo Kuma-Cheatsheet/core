@@ -54,6 +54,14 @@ module.exports = {
                 'ga': 'UA-134763793-1' // for example UA-00000000-0
             }
         ],
+
+        // https://vuepress.github.io/en/plugins/dehydrate/
+        // yarn global add vuepress-plugin-clean-urls
+        ['dehydrate'],
+
+        // https://vuepress.github.io/en/plugins/clean-urls/
+        // yarn global add vuepress-plugin-dehydrate
+        ['clean-urls'],
     ],
 
     // Editing header for each language
