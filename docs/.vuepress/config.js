@@ -54,10 +54,6 @@ module.exports = {
                 'ga': 'UA-134763793-1' // for example UA-00000000-0
             }
         ],
-
-        // https://vuepress.github.io/en/plugins/clean-urls/
-        // yarn global add vuepress-plugin-clean-urls
-        ['clean-urls'],
     ],
 
     // Editing header for each language
