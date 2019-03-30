@@ -3,8 +3,8 @@
 
 // - base (as kuma-cheatsheet.github.io/[base])
 // - repo
-// - ga (as Google Analytics tracking code)
-// - algolia API code
+// - ga (a Google Analytics tracking code API)
+// - algolia API index and API name
 // - sidebar (optional) for each language
 
 // and you are should not be edit other lines as they are a template for all cheatsheet.
@@ -12,6 +12,7 @@
 // For more information, please visit kuma-cheatsheet.github.io for more information.
 
 module.exports = {
+    // Documentation : https://v1.vuepress.vuejs.org/config/#basic-config
     base: '/core/', // It should always start and end with a slash.
 
     repo: 'Kuma-Cheatsheet/core',
@@ -19,41 +20,47 @@ module.exports = {
     editLinks: true,
     editLinkText: 'Help us improve this page!',
 
-    // Official : https://vuepress.vuejs.org/config/#head
+    // Setup favicon for the website
+    // Documentation : https://v1.vuepress.vuejs.org/config/#head
     head: [
         ['link', { rel: 'icon', href: 'https://avatars1.githubusercontent.com/u/44744915' }]
     ],
 
-    // Official : https://vuepress.vuejs.org/config/#markdown
+    // Documentation : https://v1.vuepress.vuejs.org/config/#markdown
     markdown: {
         lineNumbers: 'True',
     },
 
-    // https://vuepress.vuejs.org/plugin/
+    // Documentation : https://v1.vuepress.vuejs.org/plugin/
+    // Make sure you have run : yarn global add vuepress@next
     plugins: [
-        // Official : https://vuepress.vuejs.org/plugin/official/plugin-pwa.html#install
-        // yarn add -D @vuepress/plugin-pwa
-        ['@vuepress/pwa'],
-
-        // Official : https://vuepress.vuejs.org/plugin/official/plugin-medium-zoom.html
-        // yarn add -D @vuepress/plugin-medium-zoom
-        ['@vuepress/medium-zoom'],
-
-        // https://vuepress.vuejs.org/plugin/official/plugin-active-header-links.html
-        // yarn add -D @vuepress/plugin-active-header-links
+        // Documentation : https://v1.vuepress.vuejs.org/plugin/official/plugin-active-header-links.html
+        // yarn add -D @vuepress/plugin-active-header-links@next
         ['@vuepress/active-header-links'],
-
-        // https://vuepress.vuejs.org/plugin/official/plugin-back-to-top.html
-        // yarn add -D @vuepress/plugin-back-to-top
+        
+        // Documentation : https://v1.vuepress.vuejs.org/plugin/official/plugin-back-to-top.html
+        // yarn add -D @vuepress/plugin-back-to-top@next
         ['@vuepress/back-to-top'],
 
-        // Official : https://vuepress.vuejs.org/plugin/official/plugin-google-analytics.html
-        // yarn add -D @vuepress/plugin-google-analytics
+        // Documentation : https://v1.vuepress.vuejs.org/plugin/official/plugin-google-analytics.html
+        // yarn add -D @vuepress/plugin-google-analytics@next
         ['@vuepress/google-analytics',
             {
                 'ga': 'UA-134763793-1' // for example UA-00000000-0
             }
         ],
+
+        // Documentation : https://v1.vuepress.vuejs.org/plugin/official/plugin-medium-zoom.html
+        // yarn add -D @vuepress/plugin-medium-zoom@next
+        ['@vuepress/medium-zoom'],
+        
+        // Documentation : https://v1.vuepress.vuejs.org/plugin/official/plugin-nprogress.html
+        // yarn add -D @vuepress/plugin-nprogress@next
+        ['@vuepress/nprogress'],
+        
+        // Documentation : yarn add -D @vuepress/plugin-pwa@next
+        // yarn add -D @vuepress/plugin-pwa
+        ['@vuepress/pwa'],
     ],
 
     // Editing header for each language
@@ -71,17 +78,17 @@ module.exports = {
     },
 
     // Editing themes
-    // Official : https://vuepress.vuejs.org/theme/default-theme-config.html
+    // Documentation : https://v1.vuepress.vuejs.org/theme/default-theme-config.html
     themeConfig: {
 
-        // https://vuepress.vuejs.org/theme/default-theme-config.html#algolia-search
+        // Documentation : https://v1.vuepress.vuejs.org/theme/default-theme-config.html#algolia-search
         algolia: {
             apiKey: '',
             indexName: '',
         },
 
         // Supports of mulitple languages
-        // https://vuepress.vuejs.org/guide/i18n.html#default-theme-i18n-config
+        // Documentation : https://v1.vuepress.vuejs.org/guide/i18n.html#default-theme-i18n-config
         locales: {
 
             // [Default] English Language
@@ -89,14 +96,14 @@ module.exports = {
                 selectText: 'Languages',
                 label: 'English',
 
-                // Official : https://vuepress.vuejs.org/theme/default-theme-config.html#last-updated
+                // Documentation : https://v1.vuepress.vuejs.org/theme/default-theme-config.html#last-updated
                 lastUpdated: 'Last update',
 
-                // Official : https://vuepress.vuejs.org/theme/default-theme-config.html#service-worker
+                // Documentation : https://v1.vuepress.vuejs.org/theme/default-theme-config.html#service-worker
                 serviceWorker: {
                     // When there is website version, notify user
                     updatePopup: {
-                        // Official : https://vuepress.vuejs.org/plugin/official/plugin-pwa.html#options
+                        // Documentation : https://v1.vuepress.vuejs.org/plugin/official/plugin-pwa.html#options
                         message: "New update of this website is available",
                         buttonText: "Reload",
                     }
@@ -151,7 +158,7 @@ module.exports = {
                 ],
 
                 sidebar: [
-                    // Official : https://vuepress.vuejs.org/theme/default-theme-config.html#sidebar
+                    // Documentation : https://v1.vuepress.vuejs.org/theme/default-theme-config.html#sidebar
 
                 ],
             },
@@ -161,14 +168,14 @@ module.exports = {
                 selectText: 'ภาษา',
                 label: 'ภาษาไทย',
 
-                // Official : https://vuepress.vuejs.org/theme/default-theme-config.html#last-updated
+                // Documentation : https://v1.vuepress.vuejs.org/theme/default-theme-config.html#last-updated
                 lastUpdated: 'อับเดทล่าสุด',
 
-                // Official : https://vuepress.vuejs.org/theme/default-theme-config.html#service-worker
+                // Documentation : https://v1.vuepress.vuejs.org/theme/default-theme-config.html#service-worker
                 serviceWorker: {
                     // When there is website version, notify user
                     updatePopup: {
-                        // Official : https://vuepress.vuejs.org/plugin/official/plugin-pwa.html#options
+                        // Documentation : https://v1.vuepress.vuejs.org/plugin/official/plugin-pwa.html#options
                         message: "New update of this website is available",
                         buttonText: "OK",
                     }
@@ -179,31 +186,31 @@ module.exports = {
                     {
                         text: 'ชีทสรุปอื่นๆ', items: [
                             {
-                                text: 'Languages', items: [
+                                text: 'ภาษาโปรแกรมมิ่ง', items: [
                                     { text: 'Python', link: 'http://kuma-cheatsheet.github.io/python' },
                                     { text: 'SQL', link: 'http://kuma-cheatsheet.github.io/sql' },
                                 ]
                             },
                             {
-                                text: 'Tools', items: [
+                                text: 'อุปกรณ์ช่วยเหลือ', items: [
                                     { text: 'SPSS', link: 'http://kuma-cheatsheet.github.io/spss' },
                                     { text: 'Git', link: 'http://kuma-cheatsheet.github.io/git' },
                                 ]
                             },
                             {
-                                text: 'Diagrams & Algorithms', items: [
+                                text: 'แผนผังและอัลกอริทึม', items: [
                                     { text: 'Class Diagram (UML)', link: 'http://kuma-cheatsheet.github.io/class-diagram' },
                                 ]
                             },
                             {
-                                text: 'Others', items: [
-                                    { text: 'See all', link: 'https://github.com/Kuma-Cheatsheet' },
+                                text: 'อื่นๆ', items: [
+                                    { text: 'ดูทั้งหมด', link: 'https://github.com/Kuma-Cheatsheet' },
                                 ]
                             }
                         ]
                     },
                     {
-                        text: 'การช่วยเหลือ', items: [
+                        text: 'ร่วมพัฒนา', items: [
                             {
                                 text: 'พัฒนาชีทสรุป', items: [
                                     { text: 'ผ่าน GitHub', link: 'https://github.com/Kuma-Cheatsheet/core/' },
@@ -212,9 +219,9 @@ module.exports = {
                             },
                             {
                                 text: 'อื่นๆ', items: [
-                                    { text: 'ข้อมูลทางกฎหมาย', link: 'https://github.com/Kuma-Cheatsheet/core/blob/master/LICENSE.md' },
-                                    { text: 'ข้อมูลการเปลี่ยนแปลง', link: 'https://github.com/Kuma-Cheatsheet/core/commits/master' },
-                                    { text: 'รายชื่อผู้พัฒนา', link: 'https://github.com/Kuma-Cheatsheet/core/pulse' },
+                                    { text: 'กฎหมายการนำไปใช้ต่อ', link: 'https://github.com/Kuma-Cheatsheet/core/blob/master/LICENSE.md' },
+                                    { text: 'รายการความเปลี่ยนแปลง', link: 'https://github.com/Kuma-Cheatsheet/core/commits/master' },
+                                    { text: 'รายชื่อผู้ร่วมพัฒนา', link: 'https://github.com/Kuma-Cheatsheet/core/pulse' },
                                     { text: 'เป้าหมายของการพัฒนา', link: 'https://github.com/Kuma-Cheatsheet/core/releases' },
                                 ]
                             },
@@ -223,7 +230,7 @@ module.exports = {
                 ],
 
                 sidebar: [
-                    // Official : https://vuepress.vuejs.org/theme/default-theme-config.html#sidebar
+                    // Documentation : https://v1.vuepress.vuejs.org/theme/default-theme-config.html#sidebar
 
                 ],
             },
